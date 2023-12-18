@@ -13,6 +13,7 @@
 		7A6042982B3060710026EB03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6042962B3060710026EB03 /* Main.storyboard */; };
 		7A60429A2B3060730026EB03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6042992B3060730026EB03 /* Assets.xcassets */; };
 		7A60429D2B3060730026EB03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A60429B2B3060730026EB03 /* LaunchScreen.storyboard */; };
+		F22A2BA2807B6A7D59919B91 /* Pods_TMSHomework_Lesson9.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A333F3604941DD5946A84A9C /* Pods_TMSHomework_Lesson9.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		7A6042992B3060730026EB03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A60429C2B3060730026EB03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A60429E2B3060730026EB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93B14E6D7B24A877A0DC0F62 /* Pods-TMSHomework-Lesson9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMSHomework-Lesson9.release.xcconfig"; path = "Target Support Files/Pods-TMSHomework-Lesson9/Pods-TMSHomework-Lesson9.release.xcconfig"; sourceTree = "<group>"; };
+		97A459F93A5DEBD9D5E0CF93 /* Pods-TMSHomework-Lesson9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMSHomework-Lesson9.debug.xcconfig"; path = "Target Support Files/Pods-TMSHomework-Lesson9/Pods-TMSHomework-Lesson9.debug.xcconfig"; sourceTree = "<group>"; };
+		A333F3604941DD5946A84A9C /* Pods_TMSHomework_Lesson9.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMSHomework_Lesson9.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22A2BA2807B6A7D59919B91 /* Pods_TMSHomework_Lesson9.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				7A60428F2B3060710026EB03 /* TMSHomework-Lesson9 */,
 				7A60428E2B3060710026EB03 /* Products */,
+				E4A6F580C214B6078429E266 /* Pods */,
+				D22B082D888A50B07A395B9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "TMSHomework-Lesson9";
 			sourceTree = "<group>";
 		};
+		D22B082D888A50B07A395B9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A333F3604941DD5946A84A9C /* Pods_TMSHomework_Lesson9.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4A6F580C214B6078429E266 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97A459F93A5DEBD9D5E0CF93 /* Pods-TMSHomework-Lesson9.debug.xcconfig */,
+				93B14E6D7B24A877A0DC0F62 /* Pods-TMSHomework-Lesson9.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A6042A12B3060730026EB03 /* Build configuration list for PBXNativeTarget "TMSHomework-Lesson9" */;
 			buildPhases = (
+				72A4B5B5EA5C6CD75CCB55D5 /* [CP] Check Pods Manifest.lock */,
 				7A6042892B3060710026EB03 /* Sources */,
 				7A60428A2B3060710026EB03 /* Frameworks */,
 				7A60428B2B3060710026EB03 /* Resources */,
+				D572AAE9D145F9DC0D3B19F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72A4B5B5EA5C6CD75CCB55D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TMSHomework-Lesson9-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D572AAE9D145F9DC0D3B19F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TMSHomework-Lesson9/Pods-TMSHomework-Lesson9-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TMSHomework-Lesson9/Pods-TMSHomework-Lesson9-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TMSHomework-Lesson9/Pods-TMSHomework-Lesson9-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7A6042892B3060710026EB03 /* Sources */ = {
@@ -287,12 +355,14 @@
 		};
 		7A6042A22B3060730026EB03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97A459F93A5DEBD9D5E0CF93 /* Pods-TMSHomework-Lesson9.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BLSN95DCGL;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "TMSHomework-Lesson9/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -315,12 +385,14 @@
 		};
 		7A6042A32B3060730026EB03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93B14E6D7B24A877A0DC0F62 /* Pods-TMSHomework-Lesson9.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BLSN95DCGL;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "TMSHomework-Lesson9/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
