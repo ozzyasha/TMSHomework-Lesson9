@@ -206,15 +206,19 @@ class ViewController: UIViewController {
         let squareSide = 70
         
         squareGreenView.isHidden = false
-        squareGreenView.frame = CGRect(x: Int.random(in: 1..<(screenWidth - squareSide)), y: Int.random(in: (upButtonBottom + squareSide)..<(squareButtonTop - squareSide)), width: squareSide, height: squareSide)
+        repeat{
+            squareGreenView.frame = CGRect(x: Int.random(in: 1..<(screenWidth - squareSide)), y: Int.random(in: (upButtonBottom + squareSide)..<(squareButtonTop - squareSide)), width: squareSide, height: squareSide)
+        } while squareGreenView.frame.intersects(squareBlueView.frame) || squareGreenView.frame.intersects(squareYellowView.frame)
         
         squareYellowView.isHidden = false
-        squareYellowView.frame = CGRect(x: Int.random(in: 1..<(screenWidth - squareSide)), y: Int.random(in: (upButtonBottom + squareSide)..<(squareButtonTop - squareSide)), width: squareSide, height: squareSide)
-        //CGRect(x: Int.random(in: 1..<Int(squareGreenView.frame.minX - 1)), y: Int.random(in: (upButtonBottom + squareSide)..<Int(squareGreenView.frame.minY - 1)), width: squareSide, height: squareSide)
+        repeat {
+            squareYellowView.frame = CGRect(x: Int.random(in: 1..<(screenWidth - squareSide)), y: Int.random(in: (upButtonBottom + squareSide)..<(squareButtonTop - squareSide)), width: squareSide, height: squareSide)
+        } while squareYellowView.frame.intersects(squareGreenView.frame) || squareYellowView.frame.intersects(squareBlueView.frame)
         
         squareBlueView.isHidden = false
-        squareBlueView.frame = CGRect(x: Int.random(in: 1..<(screenWidth - squareSide)), y: Int.random(in: (upButtonBottom + squareSide)..<(squareButtonTop - squareSide)), width: squareSide, height: squareSide)
-        //CGRect(x: Int.random(in: Int(squareGreenView.frame.maxX + 1)..<(screenWidth - squareSide)), y: Int.random(in: Int(squareGreenView.frame.maxY + 1)..<(squareButtonTop - squareSide)), width: squareSide, height: squareSide)
+        repeat {
+            squareBlueView.frame = CGRect(x: Int.random(in: 1..<(screenWidth - squareSide)), y: Int.random(in: (upButtonBottom + squareSide)..<(squareButtonTop - squareSide)), width: squareSide, height: squareSide)
+        } while squareBlueView.frame.intersects(squareYellowView.frame) || squareBlueView.frame.intersects(squareGreenView.frame)
     }
 
 }
