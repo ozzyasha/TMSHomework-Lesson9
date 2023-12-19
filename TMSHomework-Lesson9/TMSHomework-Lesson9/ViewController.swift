@@ -132,9 +132,12 @@ class ViewController: UIViewController {
         let safeAreaWidth = Int(view.safeAreaLayoutGuide.layoutFrame.size.width)
         let safeAreaHeight = Int(view.safeAreaLayoutGuide.layoutFrame.size.height)
         let safeAreaTop = Int(view.safeAreaInsets.top)
+        let upButtonBottom = Int(upButton.frame.maxY)
+        let squareButtonTop = Int(squareButton.frame.minY)
+        
         let circleSide = Int(circleView.bounds.size.width)
         
-        circleView.frame = CGRect(x: Int.random(in: (1 + circleSide)..<(safeAreaWidth - circleSide)), y: Int.random(in: safeAreaTop..<(safeAreaHeight - circleSide)), width: circleSide, height: circleSide)
+        circleView.frame = CGRect(x: Int.random(in: 1..<(safeAreaWidth - circleSide)), y: Int.random(in: (upButtonBottom + circleSide)..<(squareButtonTop - circleSide)), width: circleSide, height: circleSide)
     }
     
     @objc func upButtonTapped() {
