@@ -11,7 +11,9 @@ import SnapKit
 class ViewController: UIViewController {
     
     let circleView = UIView()
-    let squareView = UIView()
+    let squareGreenView = UIView()
+    let squareYellowView = UIView()
+    let squareBlueView = UIView()
     
     let upButton = UIButton(type: .system)
     let downButton = UIButton(type: .system)
@@ -31,6 +33,22 @@ class ViewController: UIViewController {
         setupButtons(button: leftButton)
         setupButtons(button: rightButton)
         setupCircleView()
+        setupSquareGreenView()
+        setupSquareYellowView()
+        setupSquareBlueView()
+    }
+    
+    func setupSquareGreenView() {
+        squareGreenView.backgroundColor = UIColor.systemGreen
+        squareGreenView.isHidden = true
+    }
+    func setupSquareYellowView() {
+        squareYellowView.backgroundColor = UIColor.systemYellow
+        squareYellowView.isHidden = true
+    }
+    func setupSquareBlueView() {
+        squareBlueView.backgroundColor = UIColor.systemBlue
+        squareBlueView.isHidden = true
     }
     
     func setupCircleView() {
@@ -89,6 +107,9 @@ class ViewController: UIViewController {
         view.addSubview(downButton)
         view.addSubview(leftButton)
         view.addSubview(rightButton)
+        view.addSubview(squareGreenView)
+        view.addSubview(squareYellowView)
+        view.addSubview(squareBlueView)
     }
     
     func setupButtonsConstraints() {
@@ -130,8 +151,6 @@ class ViewController: UIViewController {
     
     @objc func circleViewTapped() {
         let safeAreaWidth = Int(view.safeAreaLayoutGuide.layoutFrame.size.width)
-        let safeAreaHeight = Int(view.safeAreaLayoutGuide.layoutFrame.size.height)
-        let safeAreaTop = Int(view.safeAreaInsets.top)
         let upButtonBottom = Int(upButton.frame.maxY)
         let squareButtonTop = Int(squareButton.frame.minY)
         
@@ -181,7 +200,21 @@ class ViewController: UIViewController {
     }
     
     @objc func squareButtonTapped() {
+        let screenWidth = Int(UIScreen.main.bounds.size.width)
+        let upButtonBottom = Int(upButton.frame.maxY)
+        let squareButtonTop = Int(squareButton.frame.minY)
+        let squareSide = 70
         
+        squareGreenView.isHidden = false
+        squareGreenView.frame = CGRect(x: Int.random(in: 1..<(screenWidth - squareSide)), y: Int.random(in: (upButtonBottom + squareSide)..<(squareButtonTop - squareSide)), width: squareSide, height: squareSide)
+        
+        squareYellowView.isHidden = false
+        squareYellowView.frame = CGRect(x: Int.random(in: 1..<(screenWidth - squareSide)), y: Int.random(in: (upButtonBottom + squareSide)..<(squareButtonTop - squareSide)), width: squareSide, height: squareSide)
+        //CGRect(x: Int.random(in: 1..<Int(squareGreenView.frame.minX - 1)), y: Int.random(in: (upButtonBottom + squareSide)..<Int(squareGreenView.frame.minY - 1)), width: squareSide, height: squareSide)
+        
+        squareBlueView.isHidden = false
+        squareBlueView.frame = CGRect(x: Int.random(in: 1..<(screenWidth - squareSide)), y: Int.random(in: (upButtonBottom + squareSide)..<(squareButtonTop - squareSide)), width: squareSide, height: squareSide)
+        //CGRect(x: Int.random(in: Int(squareGreenView.frame.maxX + 1)..<(screenWidth - squareSide)), y: Int.random(in: Int(squareGreenView.frame.maxY + 1)..<(squareButtonTop - squareSide)), width: squareSide, height: squareSide)
     }
 
 }
